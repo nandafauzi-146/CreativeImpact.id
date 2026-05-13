@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Impact — Seminar & Workshop</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <div class="logo-icon">CI</div>
+    <span class="logo-text">Creative<span>Impact</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#speakers">Pembicara</a></li>
+    <li><a href="#panitia">Panitia</a></li>
+    <li><a href="#portfolio">Portofolio</a></li>
+    <li><a href="#dokumentasi">Dokumentasi</a></li>
+    <li><a href="#registration" class="nav-cta">Daftar Sekarang</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="nav-mobile" id="navMobile">
+  <a href="#hero" onclick="closeMobileNav()">Beranda</a>
+  <a href="#about" onclick="closeMobileNav()">Tentang</a>
+  <a href="#agenda" onclick="closeMobileNav()">Agenda</a>
+  <a href="#speakers" onclick="closeMobileNav()">Pembicara</a>
+  <a href="#panitia" onclick="closeMobileNav()">Panitia</a>
+  <a href="#portfolio" onclick="closeMobileNav()">Portofolio</a>
+  <a href="#dokumentasi" onclick="closeMobileNav()">Dokumentasi</a>
+  <a href="#registration" onclick="closeMobileNav()" style="color:var(--yellow)">Daftar Sekarang</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Seminar & Workshop 2025</div>
+    <h1 class="hero-title">
+      <span class="line1">CREATIVE</span>
+      <span class="line2">IMPACT</span>
+    </h1>
+    <p class="hero-subtitle">Wujudkan ide, perkuat kreativitas, dan ciptakan dampak nyata bersama para profesional terdepan di bidangnya.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        12 Agustus 2026
+      </div>
+      <div class="hero-meta-divider"></div>
+      <div class="hero-meta-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Jogja Expo Center (JEC)
+      </div>
+      <div class="hero-meta-divider"></div>
+      <div class="hero-meta-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        500+ Peserta
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="#registration" class="btn-primary">Daftar Sekarang →</a>
+      <a href="#about" class="btn-secondary">Pelajari Lebih</a>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section style="background: var(--navy-mid); padding: 4rem 5%;">
+  <div class="countdown-section reveal">
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin-top:0.5rem;">Event Dimulai Dalam</h3>
+    <div class="countdown-grid">
+      <div class="countdown-item">
+        <span class="countdown-num" id="cd-days">00</span>
+        <span class="countdown-label">Hari</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="cd-hours">00</span>
+        <span class="countdown-label">Jam</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="cd-mins">00</span>
+        <span class="countdown-label">Menit</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="cd-secs">00</span>
+        <span class="countdown-label">Detik</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-accent"></div>
+      <div class="about-img-frame">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Creative Impact Event">
+        <div class="about-img-overlay"></div>
+      </div>
+      <div class="about-badge-card">
+        <div class="big">5th</div>
+        <div class="small">Tahun<br>Berturut</div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <div class="section-header">
+        <div class="section-tag">Tentang Event</div>
+        <h2 class="section-title">Lebih dari Sekadar<br><span>Seminar Biasa</span></h2>
+        <div class="section-line"><div class="section-line-dot"></div></div>
+      </div>
+      <p>Creative Impact adalah platform tahunan yang mempertemukan para kreator, profesional, dan inovator muda Indonesia untuk saling berbagi, belajar, dan berkolaborasi dalam suasana yang inspiratif dan dinamis.</p>
+      <p>Selama 2 hari penuh, peserta akan mendapatkan wawasan eksklusif dari 12 pembicara berpengalaman, mengikuti 8 workshop intensif, dan membangun koneksi yang bermakna dengan sesama profesional.</p>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num">12+</div>
+          <div class="stat-label">Pembicara</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">8</div>
+          <div class="stat-label">Workshop</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Peserta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section id="agenda">
+  <div class="section-header reveal">
+    <div class="section-tag">Jadwal Kegiatan</div>
+    <h2 class="section-title">Agenda <span>Lengkap</span></h2>
+    <div class="section-line"><div class="section-line-dot"></div></div>
+    <p class="section-desc">Dua hari penuh konten berkualitas, workshop intensif, dan networking session yang tak ternilai.</p>
+  </div>
+  <div class="agenda-tabs reveal">
+    <button class="agenda-tab active" onclick="switchTab('day1', this)">Hari 1 — 25 Okt</button>
+    <button class="agenda-tab" onclick="switchTab('day2', this)">Hari 2 — 26 Okt</button>
+  </div>
+
+  <div class="agenda-content active" id="day1">
+    <div class="timeline-item reveal">
+      <div class="timeline-time">07.30</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Registrasi & Welcome Kit</h4>
+        <p>Pengambilan tanda peserta, welcome pack eksklusif, dan snack pembuka.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">09.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Opening Ceremony & Keynote</h4>
+        <p>Sambutan resmi, penampilan seni pembuka, dan keynote speech utama.</p>
+        <span class="speaker">🎤 Dr. Rina Kusuma — CEO Kreativa Indonesia</span>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">10.30</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Workshop: Design Thinking untuk Inovasi</h4>
+        <p>Workshop intensif 3 jam dengan metode design thinking hands-on bersama fasilitator berpengalaman.</p>
+        <span class="speaker">🎤 Ahmad Fauzi — Lead Designer Tokopedia</span>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">13.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Ishoma & Networking Lunch</h4>
+        <p>Waktu istirahat dan kesempatan membangun koneksi dengan sesama peserta.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">14.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Panel: Masa Depan Ekonomi Kreatif</h4>
+        <p>Diskusi panel 5 narasumber membahas tren dan peluang di industri kreatif global.</p>
+        <span class="speaker">🎤 Panel 5 Narasumber</span>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">16.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Creative Showcase & Exhibition</h4>
+        <p>Pameran karya peserta terpilih dan sesi portfolio review bersama juri profesional.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">18.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Gala Dinner & Networking Night</h4>
+        <p>Malam keakraban dengan entertainment dan penghargaan terbaik hari pertama.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="agenda-content" id="day2">
+    <div class="timeline-item reveal">
+      <div class="timeline-time">08.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Registrasi Hari Kedua</h4>
+        <p>Absensi dan persiapan sesi hari kedua.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">09.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Workshop: Content Creation & Branding</h4>
+        <p>Strategi konten digital, personal branding, dan storytelling yang efektif di era modern.</p>
+        <span class="speaker">🎤 Siti Rahayu — Content Director Gojek</span>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">11.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Seminar: AI & Kreativitas</h4>
+        <p>Bagaimana kecerdasan buatan mengubah lanskap industri kreatif dan cara memanfaatkannya.</p>
+        <span class="speaker">🎤 Budi Santoso — AI Researcher, BRIN</span>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">13.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Ishoma</h4>
+        <p>Istirahat siang dan networking session informal.</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">14.00</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Workshop Pilihan (3 Sesi Paralel)</h4>
+        <p>Fotografi Kreatif · UI/UX Design · Copywriting & Marketing</p>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-time">16.30</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-body">
+        <h4>Awarding & Closing Ceremony</h4>
+        <p>Pengumuman pemenang, pemberian sertifikat, dan penutupan resmi Creative Impact 2025.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section id="speakers">
+  <div class="section-header reveal">
+    <div class="section-tag">Narasumber</div>
+    <h2 class="section-title">Pembicara <span>Tamu</span></h2>
+    <div class="section-line"><div class="section-line-dot"></div></div>
+    <p class="section-desc">Dihadirkan dari berbagai industri, para pembicara kami adalah pemimpin yang telah membuktikan dampak nyata kreativitas mereka.</p>
+  </div>
+  <div class="speakers-grid">
+    <div class="speaker-card reveal">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Dr. Rina Kusuma" class="speaker-img">
+      <div class="speaker-info">
+        <span class="speaker-topic">Keynote</span>
+        <h3 class="speaker-name">Dr. Rina Kusuma</h3>
+        <p class="speaker-role">CEO, Kreativa Indonesia</p>
+        <div class="speaker-socials">
+          <a href="#">in</a><a href="#">tw</a><a href="#">ig</a>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-card reveal">
+      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&q=80" alt="Ahmad Fauzi" class="speaker-img">
+      <div class="speaker-info">
+        <span class="speaker-topic">Design Thinking</span>
+        <h3 class="speaker-name">Ahmad Fauzi</h3>
+        <p class="speaker-role">Lead Designer, Tokopedia</p>
+        <div class="speaker-socials">
+          <a href="#">in</a><a href="#">tw</a><a href="#">ig</a>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-card reveal">
+      <img src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&q=80" alt="Siti Rahayu" class="speaker-img">
+      <div class="speaker-info">
+        <span class="speaker-topic">Content & Branding</span>
+        <h3 class="speaker-name">Siti Rahayu</h3>
+        <p class="speaker-role">Content Director, Gojek</p>
+        <div class="speaker-socials">
+          <a href="#">in</a><a href="#">tw</a><a href="#">ig</a>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-card reveal">
+      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Budi Santoso" class="speaker-img">
+      <div class="speaker-info">
+        <span class="speaker-topic">AI & Teknologi</span>
+        <h3 class="speaker-name">Budi Santoso</h3>
+        <p class="speaker-role">AI Researcher, BRIN</p>
+        <div class="speaker-socials">
+          <a href="#">in</a><a href="#">tw</a><a href="#">ig</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PANITIA -->
+<section id="panitia">
+  <div class="section-header reveal">
+    <div class="section-tag">Tim Pelaksana</div>
+    <h2 class="section-title">Panitia <span>Pelaksana</span></h2>
+    <div class="section-line"><div class="section-line-dot"></div></div>
+    <p class="section-desc">Di balik layar kesuksesan Creative Impact, ada tim luar biasa yang bekerja keras untuk menghadirkan pengalaman terbaik bagi setiap peserta.</p>
+  </div>
+  <div class="panitia-grid">
+    <!-- Ketua -->
+    <div class="panitia-card reveal">
+      <img src="Nanda.jpg" alt="Nanda Fauzi" class="panitia-avatar">
+      <div class="panitia-role">Ketua Panitia</div>
+      <div class="panitia-name">Nanda Fauzi</div>
+      <div class="panitia-division">Koordinator Umum</div>
+    </div>
+    <div class="panitia-card reveal">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Dani Kurniawan" class="panitia-avatar">
+      <div class="panitia-role">Sekretaris</div>
+      <div class="panitia-name">Dani Kurniawan</div>
+      <div class="panitia-division">Administrasi & Dokumen</div>
+    </div>
+    <div class="panitia-card reveal">
+      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Lia Handayani" class="panitia-avatar">
+      <div class="panitia-role">Bendahara</div>
+      <div class="panitia-name">Lia Handayani</div>
+      <div class="panitia-division">Keuangan & Anggaran</div>
+    </div>
+    <div class="panitia-card reveal">
+      <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80" alt="Fajar Nugraha" class="panitia-avatar">
+      <div class="panitia-role">Div. Acara</div>
+      <div class="panitia-name">Fajar Nugraha</div>
+      <div class="panitia-division">Program & Rundown</div>
+    </div>
+    <div class="panitia-card reveal">
+      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" alt="Dewi Anggraini" class="panitia-avatar">
+      <div class="panitia-role">Div. Publikasi</div>
+      <div class="panitia-name">Dewi Anggraini</div>
+      <div class="panitia-division">Media & Komunikasi</div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-header reveal">
+    <div class="section-tag">Portofolio</div>
+    <h2 class="section-title">Karya & <span>Pencapaian</span></h2>
+    <div class="section-line"><div class="section-line-dot"></div></div>
+    <p class="section-desc">Rekam jejak event-event Creative Impact yang telah kami selenggarakan dan dampak nyata yang tercipta.</p>
+  </div>
+  <div class="portfolio-filter reveal">
+    <button class="filter-btn active" onclick="filterPortfolio('all', this)">Semua</button>
+    <button class="filter-btn" onclick="filterPortfolio('seminar', this)">Seminar</button>
+    <button class="filter-btn" onclick="filterPortfolio('workshop', this)">Workshop</button>
+    <button class="filter-btn" onclick="filterPortfolio('pameran', this)">Pameran</button>
+  </div>
+  <div class="portfolio-grid reveal">
+    <div class="portfolio-item" data-cat="seminar">
+      <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&q=80" alt="Seminar Nasional" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <div class="portfolio-category">Seminar</div>
+        <div class="portfolio-title">Seminar Nasional<br>Creative Impact 2024</div>
+        <div class="portfolio-icon">→</div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="workshop">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Workshop Design" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <div class="portfolio-category">Workshop</div>
+        <div class="portfolio-title">Design Thinking Lab</div>
+        <div class="portfolio-icon">→</div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="pameran">
+      <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Pameran Karya" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <div class="portfolio-category">Pameran</div>
+        <div class="portfolio-title">Creative Showcase</div>
+        <div class="portfolio-icon">→</div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="seminar">
+      <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80" alt="Keynote 2023" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <div class="portfolio-category">Seminar</div>
+        <div class="portfolio-title">Keynote Session 2023</div>
+        <div class="portfolio-icon">→</div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="workshop">
+      <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Workshop Branding" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <div class="portfolio-category">Workshop</div>
+        <div class="portfolio-title">Branding Intensive</div>
+        <div class="portfolio-icon">→</div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="pameran">
+      <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&q=80" alt="Award Night" class="portfolio-img">
+      <div class="portfolio-overlay">
+        <div class="portfolio-category">Pameran</div>
+        <div class="portfolio-title">Gala Award Night</div>
+        <div class="portfolio-icon">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOKUMENTASI -->
+<section id="dokumentasi">
+  <div class="section-header reveal">
+    <div class="section-tag">Galeri</div>
+    <h2 class="section-title">Dokumentasi <span>Acara</span></h2>
+    <div class="section-line"><div class="section-line-dot"></div></div>
+    <p class="section-desc">Momen-momen terbaik dari penyelenggaraan Creative Impact sebelumnya yang penuh energi dan inspirasi.</p>
+  </div>
+  <div class="docs-gallery">
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Dokumentasi 1" class="doc-img">
+      <div class="doc-caption"><p>Opening Ceremony 2024</p><span>25 Oktober 2024</span></div>
+    </div>
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Dokumentasi 2" class="doc-img">
+      <div class="doc-caption"><p>Workshop Sesi Pagi</p><span>Design Thinking Lab</span></div>
+    </div>
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1559223607-b4d0555ae227?w=600&q=80" alt="Dokumentasi 3" class="doc-img">
+      <div class="doc-caption"><p>Panel Discussion</p><span>Masa Depan Kreatif</span></div>
+    </div>
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80" alt="Dokumentasi 4" class="doc-img">
+      <div class="doc-caption"><p>Sesi Networking</p><span>Lunch & Connect</span></div>
+    </div>
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Dokumentasi 5" class="doc-img">
+      <div class="doc-caption"><p>Group Workshop</p><span>Kolaborasi Kreatif</span></div>
+    </div>
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80" alt="Dokumentasi 6" class="doc-img">
+      <div class="doc-caption"><p>Keynote Speaker</p><span>Sesi Inspiratif</span></div>
+    </div>
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&q=80" alt="Dokumentasi 7" class="doc-img">
+      <div class="doc-caption"><p>Gala Dinner</p><span>Malam Keakraban</span></div>
+    </div>
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Dokumentasi 8" class="doc-img">
+      <div class="doc-caption"><p>Awarding Night</p><span>Penghargaan Terbaik</span></div>
+    </div>
+    <div class="doc-item reveal">
+      <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&q=80" alt="Dokumentasi 9" class="doc-img">
+      <div class="doc-caption"><p>Sesi Foto Bersama</p><span>Kenangan Peserta</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION -->
+<section id="registration">
+  <div class="section-header reveal">
+    <div class="section-tag">Sponsorship</div>
+    <h2 class="section-title">Paket <span>Sponsorship</span></h2>
+    <div class="section-line"><div class="section-line-dot"></div></div>
+    <p class="section-desc">Bergabunglah sebagai mitra strategis kami dan tingkatkan eksposur brand Anda di hadapan ratusan profesional kreatif.</p>
+  </div>
+  <div class="tickets-grid">
+    <div class="ticket-card reveal">
+      <div class="ticket-type">Bronze Sponsor</div>
+      <div class="ticket-price"><sup>Rp</sup>5<span style="font-size:1.5rem">JT</span></div>
+      <div class="ticket-per">Official Partner</div>
+      <ul class="ticket-features">
+        <li>Logo pada Website & Media Sosial</li>
+        <li>Penyebaran Brosur di Welcome Kit</li>
+        <li>Mention oleh MC saat Acara</li>
+        <li>2 Tiket VIP Gratis</li>
+        <li>Logo pada Backdrop Utama (Small)</li>
+      </ul>
+      <a href="#contact" class="btn-secondary" style="display:block;text-align:center;padding:0.85rem;border-radius:8px;font-weight:700;transition:all 0.3s;text-decoration:none;color:var(--white);border:2px solid rgba(255,255,255,0.2);">Hubungi Kami</a>
+    </div>
+    <div class="ticket-card featured reveal">
+      <div class="ticket-type">Gold Sponsor</div>
+      <div class="ticket-price"><sup>Rp</sup>15<span style="font-size:1.5rem">JT</span></div>
+      <div class="ticket-per">Main Partner</div>
+      <ul class="ticket-features">
+        <li>Semua Benefit Bronze & Silver</li>
+        <li>Booth Eksklusif di Area Utama</li>
+        <li>Logo pada Seluruh Materi Promosi</li>
+        <li>Sesi Presentasi Produk (10 Menit)</li>
+        <li>Slot Iklan Video di Layar Utama</li>
+        <li>10 Tiket VIP Gratis</li>
+        <li>Eksklusivitas Kategori Industri</li>
+      </ul>
+      <a href="#contact" class="btn-primary" style="display:block;text-align:center;padding:0.85rem;border-radius:8px;font-weight:700;transition:all 0.3s;text-decoration:none;color:var(--navy);">Hubungi Kami</a>
+    </div>
+    <div class="ticket-card reveal">
+      <div class="ticket-type">Silver Sponsor</div>
+      <div class="ticket-price"><sup>Rp</sup>10<span style="font-size:1.5rem">JT</span></div>
+      <div class="ticket-per">Associate Partner</div>
+      <ul class="ticket-features">
+        <li>Semua Benefit Bronze</li>
+        <li>Booth Standard (2x2m)</li>
+        <li>Logo pada ID Card Peserta</li>
+        <li>Logo pada Backdrop Utama (Medium)</li>
+        <li>5 Tiket VIP Gratis</li>
+      </ul>
+      <a href="#contact" class="btn-secondary" style="display:block;text-align:center;padding:0.85rem;border-radius:8px;font-weight:700;transition:all 0.3s;text-decoration:none;color:var(--white);border:2px solid rgba(255,255,255,0.2);">Hubungi Kami</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="section-tag">Hubungi Kami</div>
+      <h3>Siap Bergabung?<br><span style="color:var(--yellow)">Kami Siap Membantu</span></h3>
+      <p>Jika Anda memiliki pertanyaan tentang event, pendaftaran, atau kolaborasi, jangan ragu untuk menghubungi tim kami.</p>
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <div class="contact-detail-text">
+          <strong>Lokasi Event</strong>
+          <span>Jogja Expo Center (JEC) Yogyakarta</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📧</div>
+        <div class="contact-detail-text">
+          <strong>Email</strong>
+          <span>info@creativeimpact.id</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📱</div>
+        <div class="contact-detail-text">
+          <strong>WhatsApp</strong>
+          <span>+62 812-3456-7890</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-detail-text">
+          <strong>Jam Operasional</strong>
+          <span>Senin–Jumat, 09.00–17.00 WIB</span>
+        </div>
+      </div>
+      <div class="map-embed" style="margin-top:2rem;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.909200535036!2d110.404488!3d-7.799437500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGrha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sid!2sid!4v1778681170523!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="reveal">
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="email@anda.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>No. WhatsApp</label>
+            <input type="tel" placeholder="+62 8xx-xxxx-xxxx">
+          </div>
+          <div class="form-group">
+            <label>Paket</label>
+            <select>
+              <option>Sponsor Bronze — Rp 5JT</option>
+              <option>Sponsor Silver — Rp 10JT</option>
+              <option>Sponsor Gold — Rp 15JT</option>
+              <option>Media Partner / Lainnya</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Asal Instansi / Universitas</label>
+          <input type="text" placeholder="Universitas / Perusahaan Anda">
+        </div>
+        <div class="form-group">
+          <label>Pesan / Pertanyaan</label>
+          <textarea placeholder="Tulis pertanyaan atau keterangan tambahan di sini..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;text-align:center;padding:1rem;font-size:1rem;border:none;cursor:pointer;">
+          Kirim Pendaftaran →
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#hero" class="nav-logo" style="text-decoration:none;">
+        <div class="logo-icon">CI</div>
+        <span class="logo-text">Creative<span>Impact</span></span>
+      </a>
+      <p>Platform tahunan untuk para kreator, profesional, dan inovator Indonesia yang ingin menciptakan dampak nyata melalui kreativitas.</p>
+      <div class="footer-socials">
+        <a href="#" title="Instagram">ig</a>
+        <a href="#" title="Twitter">tw</a>
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="YouTube">yt</a>
+        <a href="#" title="TikTok">tt</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#about">Tentang Event</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#speakers">Pembicara</a></li>
+        <li><a href="#panitia">Panitia</a></li>
+        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#dokumentasi">Dokumentasi</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informasi</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Syarat & Ketentuan</a></li>
+        <li><a href="#">Kebijakan Privasi</a></li>
+        <li><a href="#">Sponsor & Partner</a></li>
+        <li><a href="#">Media Press</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p style="color:var(--gray);font-size:0.85rem;line-height:1.6;margin-bottom:1rem;">Dapatkan update terbaru, early bird info, dan konten eksklusif langsung di inbox Anda.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Email Anda">
+        <button>Subscribe</button>
+      </div>
+      <p style="color:var(--gray);font-size:0.75rem;margin-top:0.8rem;">🔒 Kami tidak akan menyebarkan email Anda.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>Creative Impact</span>. All Rights Reserved.</p>
+    <p>Crafted with ❤️ in <span>Yogyakarta</span></p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<a href="#hero" class="back-to-top" id="backToTop">↑</a>
+
+<script src="script.js"></script>
+</body>
+</html>
