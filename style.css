@@ -24,6 +24,83 @@ body {
   overflow-x: hidden;
 }
 
+body.popup-open {
+  overflow: hidden;
+}
+
+.popup-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.popup-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-dialog {
+  width: min(960px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 24px;
+  background: #081424;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.popup-dialog img {
+  width: 100%;
+  max-height: calc(90vh - 40px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(10, 25, 47, 0.9);
+  color: var(--white);
+  font-size: 1.25rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.popup-close:hover {
+  transform: scale(1.05);
+  background: rgba(245, 197, 24, 0.18);
+  color: var(--yellow);
+}
+
+@media (max-width: 768px) {
+  .popup-dialog {
+    max-height: 85vh;
+    border-radius: 18px;
+  }
+
+  .popup-close {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--navy); }

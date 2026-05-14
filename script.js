@@ -67,8 +67,45 @@ function startCountdown() {
   }, 1000);
 }
 
+function openPopup() {
+  const popup = document.getElementById('openingPopup');
+  if (!popup) return;
+  popup.classList.add('active');
+  document.body.classList.add('popup-open');
+}
+
+function closePopup() {
+  const popup = document.getElementById('openingPopup');
+  if (!popup) return;
+  popup.classList.remove('active');
+  document.body.classList.remove('popup-open');
+}
+
 // Jalankan fungsi setelah semua elemen HTML selesai dimuat
-document.addEventListener('DOMContentLoaded', startCountdown);
+document.addEventListener('DOMContentLoaded', () => {
+  startCountdown();
+  openPopup();
+  const closeBtn = document.getElementById('popupClose');
+  const popup = document.getElementById('openingPopup');
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closePopup);
+  }
+
+  if (popup) {
+    popup.addEventListener('click', (event) => {
+      if (event.target === popup) {
+        closePopup();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closePopup();
+    }
+  });
+});
 
 // ── AGENDA TABS ──
 function switchTab(id, btn) {
