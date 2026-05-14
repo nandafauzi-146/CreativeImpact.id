@@ -48,7 +48,7 @@ body.popup-open {
 }
 
 .popup-dialog {
-  width: min(960px, 100%);
+  width: min(960px, 95%);
   max-height: 90vh;
   overflow: auto;
   border-radius: 24px;
@@ -63,6 +63,24 @@ body.popup-open {
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+/* Ensure all images are fluid */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Medium screens adjustments */
+@media (max-width: 1200px) {
+  section { padding: 4rem 4%; }
+  .hero-content { max-width: 720px; padding: 0 1rem; }
+  .footer-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
+/* Small tweaks for mobile */
+@media (max-width: 480px) {
+  .popup-dialog { width: 95%; max-height: 88vh; }
+  .popup-close { width: 48px; height: 48px; font-size: 1.35rem; }
+  .hero-badge { margin-bottom: 1.2rem; }
+  section { padding: 3rem 3%; }
 }
 
 .popup-close {
